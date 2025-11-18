@@ -1,257 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>Suman Teja | Data Analyst (Medical Economics & Financial Analytics)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suman Teja Goud — Data Analyst</title>
-  <meta name="description" content="Business & Data Analyst specializing in SQL, Python, Power BI, and marketing & financial analytics." />
-  <meta property="og:title" content="Suman Teja Goud — Portfolio" />
-  <meta property="og:description" content="Business & Data Analyst | SQL • Python • Power BI" />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Medical Economics–driven Data Analyst with 4+ years of experience in healthcare, insurance, and financial analytics." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
   <style>
     :root {
-      --bg: #0b0f14;
-      --card: #121822;
-      --ink: #e6edf3;
-      --muted: #9fb0c0;
-      --accent: #7cd4ff;
-      --accent-2: #b6f09c;
-      --maxw: 980px;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --bg: #070a12;
+      --bg-alt: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
     }
-    html, body { height: 100%; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; line-height: 1.6; font-size: 16px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
-    header { position: sticky; top: 0; background: rgba(11,15,20,0.7); backdrop-filter: blur(8px); z-index: 50; }
-    nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; }
-    nav .brand { font-weight: 700; letter-spacing: 0.2px; }
-    nav .links a { margin-left: 16px; font-weight: 600; color: var(--muted); }
-    nav .links a:hover { color: var(--ink); }
-    .hero { padding: 64px 24px 28px; }
-    .hero .wrap { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; }
-    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #0e2433; color: var(--accent); font-weight: 600; }
-    h1 { font-size: 40px; line-height: 1.15; margin: 12px 0 8px; }
-    .sub { color: var(--muted); margin-bottom: 20px; }
-    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 12px; font-weight: 700; border: 1px solid rgba(255,255,255,0.12); background: #152031; color: var(--ink); box-shadow: var(--shadow); }
-    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0f14; border: none; }
-    section { padding: 28px 24px; }
-    .grid { display: grid; gap: 16px; }
-    .cards { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .card { grid-column: span 12; background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
-    .kicker { text-transform: uppercase; letter-spacing: 1.4px; color: var(--muted); font-weight: 700; font-size: 12px; }
-    h2 { margin: 8px 0 8px; font-size: 28px; }
-    h3 { margin: 6px 0 4px; font-size: 20px; }
-    .meta { color: var(--muted); font-size: 14px; }
-    ul.tidy { margin: 8px 0 0 18px; }
-    .two { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill { padding: 6px 10px; border-radius: 10px; background: #152031; border: 1px solid rgba(255,255,255,0.08); font-weight: 600; color: var(--muted); }
-    footer { border-top: 1px solid rgba(255,255,255,0.08); color: var(--muted); padding: 24px; text-align: center; }
-    @media (max-width: 820px) { .hero .wrap { grid-template-columns: 1fr; } .two { grid-template-columns: 1fr; } }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 18px 64px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .brand h2 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .pill {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(15,23,42,0.9);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .nav-link {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,0.9);
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    }
+    .nav-link:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px;
+    }
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .card {
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 60%);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      box-shadow: 0 18px 38px rgba(15,23,42,0.8);
+    }
+
+    .about-text p {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-bottom: 8px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .chip {
+      font-size: 0.78rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 3px 9px;
+      color: var(--muted);
+      background: rgba(15,23,42,0.9);
+    }
+
+    .exp-item {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(31,41,55,0.8);
+    }
+    .exp-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .exp-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .exp-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .exp-highlights {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      margin-top: 6px;
+    }
+    .exp-highlights li {
+      margin-left: 18px;
+      margin-bottom: 3px;
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 6px 12px;
+      font-size: 0.8rem;
+      color: #d1d5db;
+    }
+    .two-col-list div::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #d1d5db;
+    }
+    .contact-list li {
+      margin-bottom: 6px;
+    }
+    footer {
+      margin-top: 32px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Suman Teja Muchunoori","jobTitle":"Data Analyst","email":"mailto:goudsumanteja@gmail.com","telephone":"+1-959-221-9242"}
-  </script>
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <div class="brand">Suman Teja Muchunoori</div>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <h1>Suman Teja</h1>
+        <h2>Data Analyst &amp; Medical Economics Specialist</h2>
+        <p class="tagline">
+          Turning healthcare &amp; financial data into insights that reduce cost, manage risk, and drive smarter decisions.
+        </p>
+        <div class="pill-row">
+          <span class="pill">4+ years of experience</span>
+          <span class="pill">Medical Economics &amp; MER</span>
+          <span class="pill">Healthcare &amp; Financial Analytics</span>
+        </div>
       </div>
-    </nav>
-  </header>
+      <nav>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/sumantejagoud/" target="_blank">LinkedIn ↗</a>
+        <a class="nav-link" href="https://github.com/goudsumanteja" target="_blank">GitHub ↗</a>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="container wrap">
-        <div>
-          <span class="pill">Data Analyst</span>
-          <h1>SQL • Python • Power BI • Tableau • BI & Automation</h1>
-          <p class="sub">Data Analyst with 5+ years of experience extracting insights from complex data to drive decisions. MSBA (University of Hartford, May 2025). Skilled in statistical analysis, data visualization, and process optimization.</p>
-          <div class="cta">
-            <a class="btn primary" href="resume.pdf" download>⬇ Download Resume (PDF)</a>
-            <a class="btn" href="mailto:goudsumanteja@gmail.com">✉️ Contact Me</a>
-            <a class="btn" href="#projects">📊 View Projects</a>
-            <a class="btn" href="https://www.linkedin.com/in/sumantejagoud/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <main>
+        <!-- ABOUT -->
+        <section id="about">
+          <div class="section-title">About</div>
+          <div class="card about-text">
+            <p>
+              Medical Economics–driven Data Analyst with 4+ years of experience analyzing medical, financial, and operational datasets
+              to identify cost drivers, utilization patterns, and outlier behavior. I specialize in MER-style analysis, trend
+              investigations, and story-driven dashboards that support clinical, actuarial, network, and finance teams.
+            </p>
+            <p>
+              I enjoy working at the intersection of healthcare, insurance, and analytics—translating raw data into clear, actionable
+              insights that reduce cost leakage, support risk mitigation, and improve decision-making.
+            </p>
           </div>
-        </div>
-        <div class="card">
-          <div class="kicker">Highlights</div>
-          <ul class="tidy">
-            <li>Built interactive dashboards in Power BI & Tableau for executive decision-making.</li>
-            <li>End‑to‑end ETL with Informatica, Talend & Apache NiFi; automated reporting with Python.</li>
-            <li>Applied ML (Scikit‑learn, TensorFlow, XGBoost) for fraud detection & risk prediction.</li>
-            <li>Cloud warehousing on Snowflake, Redshift & BigQuery; orchestrated with Airflow.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="cards">
+        <!-- EXPERIENCE -->
+        <section id="experience">
+          <div class="section-title">Experience</div>
           <div class="card">
-            <div class="kicker">About</div>
-            <h2>Hi, I’m Suman.</h2>
-            <p>Data Analyst with 5+ years of experience in extracting insights from structured and unstructured data using SQL, Python & R, with a focus on automation and BI. I craft dashboards (Power BI, Tableau), build ETL pipelines (Informatica, Talend, NiFi), and deliver scalable analytics on Snowflake/Redshift/BigQuery. Comfortable across Hadoop/Spark, APIs, and CI/CD to get reliable insights into production.</p>
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">Data Analyst · MerDevelop</div>
+                <div class="exp-meta">Aug 2021 – Jul 2023 · Hyderabad, India</div>
+              </div>
+              <div class="exp-meta">Insurance &amp; Medical Economics Analytics</div>
+              <ul class="exp-highlights">
+                <li>Analyzed large-scale insurance and financial datasets using SQL &amp; Python to identify medical cost drivers, utilization spikes, and performance deviations.</li>
+                <li>Performed MER-aligned variance, unit-cost, and utilization-driver analysis to detect claim cost spikes, abnormal utilization, and provider outliers.</li>
+                <li>Built Power BI/Tableau dashboards that visualized MER findings, high-cost categories, and network improvement opportunities for leadership.</li>
+                <li>Automated recurring ETL workflows with Airflow, Talend, and AWS Glue, reducing manual reporting effort and improving monthly/quarterly turnaround.</li>
+                <li>Partnered with actuarial, underwriting, and network teams to generate scoreable action items that improved discount position and reduced cost leakage.</li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">Process Executive - Data · Cognizant</div>
+                <div class="exp-meta">May 2019 – Jul 2021 · Hyderabad, India</div>
+              </div>
+              <div class="exp-meta">Loss Mitigation &amp; Mortgage Analytics</div>
+              <ul class="exp-highlights">
+                <li>Analyzed borrower financial data, repayment behavior, and delinquency trends using Excel &amp; SQL to identify risk indicators and portfolio performance deviations.</li>
+                <li>Performed drill-down analysis of loan modifications, defaults, and repayment outcomes to uncover root causes behind performance trends.</li>
+                <li>Built daily, weekly, and monthly KPI dashboards (Excel Pivot Tables, Power Query) to track reinstatements, delinquencies, and modification approvals.</li>
+                <li>Ensured compliance with FHA, VA, USDA, and HAMP guidelines by validating calculations, eligibility criteria, and documentation completeness.</li>
+                <li>Improved workflows, data quality, and audit readiness through ongoing validation, error tracking, and root-cause analysis of data issues.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
 
-    <section id="experience">
-      <div class="container">
-        <div class="kicker">Experience</div>
-        <h2>Professional Experience</h2>
-        <div class="grid">
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <!-- SKILLS -->
+        <section id="skills">
+          <div class="section-title">Skills</div>
           <div class="card">
-            <h3>Senior Data Analyst — W. R. Berkley Corporation</h3>
-            <div class="meta">Jan 2025 – Present · Greenwich, CT</div>
-            <ul class="tidy">
-              <li>Designed relational data models & SQL pipelines; built scalable ETL with Informatica & Apache NiFi for financial datasets.</li>
-              <li>Implemented big‑data frameworks with Spark/Hadoop for credit risk & segmentation; centralized warehousing on Snowflake & Redshift.</li>
-              <li>Built real‑time streaming with Kafka/Kinesis; orchestrated workflows with Airflow; delivered KPI dashboards in Power BI/Tableau/Looker.</li>
+            <h3 style="font-size:0.9rem; margin-bottom:4px;">Core Analytics</h3>
+            <div class="chips">
+              <span class="chip">SQL (Advanced)</span>
+              <span class="chip">Python (Pandas, NumPy)</span>
+              <span class="chip">R</span>
+              <span class="chip">Excel (Power Query, Pivot)</span>
+            </div>
+
+            <h3 style="font-size:0.9rem; margin:10px 0 4px;">BI & Visualization</h3>
+            <div class="chips">
+              <span class="chip">Power BI</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Looker</span>
+              <span class="chip">Storytelling Dashboards</span>
+            </div>
+
+            <h3 style="font-size:0.9rem; margin:10px 0 4px;">Data Engineering & Cloud</h3>
+            <div class="chips">
+              <span class="chip">Apache Airflow</span>
+              <span class="chip">Talend</span>
+              <span class="chip">AWS Glue</span>
+              <span class="chip">Snowflake</span>
+              <span class="chip">Amazon Redshift</span>
+              <span class="chip">BigQuery</span>
+              <span class="chip">AWS · Azure · GCP</span>
+            </div>
+
+            <h3 style="font-size:0.9rem; margin:10px 0 4px;">Domains</h3>
+            <div class="chips">
+              <span class="chip">Medical Economics</span>
+              <span class="chip">MER Reporting</span>
+              <span class="chip">Utilization & Trend Analysis</span>
+              <span class="chip">Loss Mitigation</span>
+              <span class="chip">Mortgage Risk Analytics</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+          <div class="section-title">Education</div>
+          <div class="card">
+            <div class="exp-item" style="border-bottom:none; padding-bottom:0; margin-bottom:0;">
+              <div class="exp-role">Master of Science in Business Analytics</div>
+              <div class="exp-meta">University of Hartford</div>
+              <p style="font-size:0.82rem; color:#d1d5db; margin-top:4px;">
+                Focus: Machine learning, predictive analytics, big data (Hadoop, Spark, Databricks), and business-focused data science.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <div class="section-title">Contact</div>
+          <div class="card">
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:sumanteja456@gmail.com">sumanteja456@gmail.com</a></li>
+              <li>GitHub: <a href="https://github.com/goudsumanteja" target="_blank">github.com/goudsumanteja</a></li>
+              <li>Portfolio: <a href="https://goudsumanteja.github.io/" target="_blank">goudsumanteja.github.io</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/sumantejagoud/" target="_blank">linkedin.com/in/sumantejagoud</a></li>
+              <li>Location: Hartford, CT (Open to relocation & remote)</li>
             </ul>
           </div>
-          <div class="card">
-            <h3>Senior Data Analyst — FactSet Research Systems</h3>
-            <div class="meta">Jul 2024 – Dec 2024 · Norwalk, CT</div>
-            <ul class="tidy">
-              <li>Automated ETL with Informatica, NiFi & Talend; optimized large‑scale processing with Hadoop/Hive/Spark.</li>
-              <li>Built monitoring with Kafka & SQL alerts; warehoused on AWS (Glue, Redshift, S3); developed predictive models for churn & claims.</li>
-              <li>Delivered self‑service analytics via Tableau/Power BI/Looker; containerized deployments with Docker/Kubernetes.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Data Analyst — Sundaram Finance Limited (MerDevelop)</h3>
-            <div class="meta">Aug 2021 – Jul 2023 · Hyderabad, India</div>
-            <ul class="tidy">
-              <li>Extracted & consolidated insurance data with SQL/Python/APIs; cleaned/engineered datasets for underwriting & actuarial models.</li>
-              <li>Built dashboards for claims TAT, premiums & renewals (Tableau, Power BI, Excel); warehoused on Redshift/BigQuery/S3.</li>
-              <li>Applied ML (Scikit‑learn/TensorFlow) for fraud detection & cost prediction; automated regulatory reporting with Python.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Programmer Analyst — Care Health Insurance (Cognizant)</h3>
-            <div class="meta">May 2019 – Jul 2021 · Hyderabad, India</div>
-            <ul class="tidy">
-              <li>Ingested policy/claims/provider data via SQL, Python & REST; transformed datasets with Pandas/NumPy/R for actuarial models.</li>
-              <li>Built executive dashboards (Tableau/Power BI/Excel) and automated ETL with Airflow, AWS Glue & Talend into Redshift/BigQuery.</li>
-              <li>Enabled self‑service analytics (Looker/Snowflake) and supported regulatory & internal reporting with Python visualizations.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </aside>
+    </div>
 
-    <section id="projects">
-      <div class="container">
-        <div class="kicker">Projects</div>
-        <h2>Selected Work</h2>
-        <div class="two">
-          <div class="card">
-            <h3>Financial Risk Analysis with ML</h3>
-            <div class="meta">Python • XGBoost • SHAP • 1M+ rows</div>
-            <p>Predicted loan default risk, engineered features, quantified top drivers with SHAP, and provided policy recommendations for underwriting.</p>
-            <p><a href="#">GitHub Repo</a> · <a href="#">Case Study</a></p>
-          </div>
-          <div class="card">
-            <h3>Marketing Analytics — Yeti Case</h3>
-            <div class="meta">Segmentation • Sizing • Pricing</div>
-            <p>Estimated market size & segments; linked perceived value to pricing and messaging to improve conversion.</p>
-            <p><a href="#">Slides</a> · <a href="#">Notebook</a></p>
-          </div>
-          <div class="card">
-            <h3>Operations Dashboard Suite</h3>
-            <div class="meta">Power BI • SQL • DAX</div>
-            <p>Sales, churn, and finance KPIs with row‑level security, scheduled refresh, and usage telemetry.</p>
-            <p><a href="#">Screenshots</a></p>
-          </div>
-          <div class="card">
-            <h3>Advanced Excel Automation</h3>
-            <div class="meta">VBA • Power Query • Pivot Models</div>
-            <p>Automated multi‑sheet reporting and data checks; standardized cross‑functional ops reporting.</p>
-            <p><a href="#">Workbook</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <footer>
+      © <span id="year"></span> Suman Teja · Data Analyst · Built with HTML &amp; CSS
+    </footer>
+  </div>
 
-    <section id="education">
-      <div class="container">
-        <div class="kicker">Education</div>
-        <div class="two">
-          <div class="card">
-            <h3>MS, Business Analytics — University of Hartford</h3>
-            <div class="meta">Aug 2023 – May 2025</div>
-            <p>Coursework: Data Mining • Predictive Modeling • Marketing Analytics • Data Visualization.</p>
-          </div>
-          <div class="card">
-            <h3>BBA — Osmania University (Great India Degree College)</h3>
-            <div class="meta">Completed Jun 2018</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="kicker">Skills</div>
-        <div class="card">
-          <div class="skills">
-            <span class="skill">SQL</span>
-            <span class="skill">Python</span>
-            <span class="skill">R</span>
-            <span class="skill">Power BI</span>
-            <span class="skill">Tableau</span>
-            <span class="skill">Looker</span>
-            <span class="skill">Advanced Excel</span>
-            <span class="skill">Informatica</span>
-            <span class="skill">Talend</span>
-            <span class="skill">Apache NiFi</span>
-            <span class="skill">Airflow</span>
-            <span class="skill">Snowflake</span>
-            <span class="skill">Redshift</span>
-            <span class="skill">BigQuery</span>
-            <span class="skill">Hadoop</span>
-            <span class="skill">Spark</span>
-            <span class="skill">Kafka</span>
-            <span class="skill">TensorFlow</span>
-            <span class="skill">Scikit‑learn</span>
-            <span class="skill">XGBoost</span>
-            <span class="skill">Docker</span>
-            <span class="skill">Kubernetes</span>
-            <span class="skill">Git/GitHub</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="kicker">Contact</div>
-        <div class="card">
-          <p><strong>Email:</strong> <a href="mailto:goudsumanteja@gmail.com">goudsumanteja@gmail.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+19592219242">+1‑959‑221‑9242</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sumantejagoud/" target="_blank" rel="noopener">linkedin.com/in/sumantejagoud</a></p>
-          <p><a class="btn" href="https://www.linkedin.com/in/sumantejagoud/" target="_blank" rel="noopener">🔗 Open LinkedIn Profile</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© <span id="yr"></span> Suman Teja Muchunoori · Built with HTML/CSS · Hosted on GitHub Pages</footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
