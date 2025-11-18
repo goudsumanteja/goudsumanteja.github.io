@@ -24,12 +24,32 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, #0f172a 0, transparent 50%),
-        radial-gradient(circle at bottom right, #0b1120 0, #020617 55%);
+      background: radial-gradient(circle at top left, #0b1120 0, transparent 50%),
+                  radial-gradient(circle at bottom right, #020617 0, #000 70%);
       color: var(--text);
       line-height: 1.6;
       min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* subtle animated glow behind everything */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(56,189,248,0.16) 0, transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(168,85,247,0.16) 0, transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: -1;
+      animation: floatGlow 16s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      100% { transform: translate3d(-40px, 30px, 0) scale(1.05); }
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -45,57 +65,92 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
+      gap: 30px;
       align-items: center;
       margin-bottom: 28px;
+      padding: 14px 18px 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.98), rgba(15,23,42,0.9));
+      box-shadow: 0 24px 60px rgba(15,23,42,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56,189,248,0.18) 0, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(168,85,247,0.22) 0, transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
     }
 
     .brand {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      max-width: 650px;
     }
 
     .brand h1 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
     }
 
     .brand h2 {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 500;
       color: var(--muted);
     }
 
     .tagline {
-      font-size: 0.85rem;
-      color: var(--muted);
+      font-size: 0.9rem;
+      color: #cbd5f5;
       max-width: 520px;
+      margin-top: 4px;
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     .pill {
       border-radius: 999px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(148,163,184,0.7);
       padding: 4px 11px;
       font-size: 0.78rem;
-      color: var(--muted);
+      color: #e5e7eb;
       background: rgba(15,23,42,0.9);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
 
     .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 12px;
+    }
+
+    .status-pill {
+      font-size: 0.78rem;
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(34,197,94,0.8);
+      color: #bbf7d0;
+      background: rgba(22,163,74,0.16);
     }
 
     nav {
@@ -104,6 +159,8 @@
       gap: 10px;
       font-size: 0.83rem;
       justify-content: flex-end;
+      width: 100%;
+      margin-top: 18px;
     }
 
     .nav-link, .btn {
@@ -145,6 +202,7 @@
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
       gap: 22px;
+      margin-top: 18px;
     }
 
     @media (max-width: 880px) {
@@ -160,17 +218,30 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--muted);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label::after {
+      content: "";
+      height: 1px;
+      width: 54px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(148,163,184,0.4), rgba(56,189,248,0.9));
+      opacity: 0.9;
     }
 
     .card {
-      background: linear-gradient(135deg, var(--card) 0%, rgba(15,23,42,0.85) 100%);
+      background: linear-gradient(135deg, var(--card) 0%, rgba(15,23,42,0.88) 100%);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
       padding: 16px 18px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      transition: transform 0.16s ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
 
     .card::before {
@@ -178,13 +249,19 @@
       position: absolute;
       inset: -40%;
       background:
-        radial-gradient(circle at 10% 0, rgba(56,189,248,0.16) 0, transparent 50%),
+        radial-gradient(circle at 10% 0, rgba(56,189,248,0.14) 0, transparent 50%),
         radial-gradient(circle at 90% 100%, rgba(168,85,247,0.18) 0, transparent 50%);
       opacity: 0.7;
       pointer-events: none;
     }
 
     .card-inner { position: relative; z-index: 1; }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 26px 70px rgba(15,23,42,0.95);
+      border-color: rgba(148,163,184,0.75);
+    }
 
     .about-text p {
       font-size: 0.9rem;
@@ -225,7 +302,7 @@
     .chip {
       font-size: 0.78rem;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.5);
+      border: 1px solid rgba(148,163,184,0.6);
       padding: 3px 9px;
       color: #e5e7eb;
       background: rgba(15,23,42,0.9);
@@ -242,10 +319,18 @@
     .project-card {
       border-radius: 18px;
       border: 1px solid rgba(148,163,184,0.55);
-      background: rgba(15,23,42,0.92);
+      background: rgba(15,23,42,0.94);
       padding: 10px 12px;
       margin-bottom: 10px;
+      transition: transform 0.14s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
     }
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 45px rgba(15,23,42,0.95);
+      border-color: rgba(56,189,248,0.9);
+      background: rgba(15,23,42,0.98);
+    }
+
     .project-title {
       font-size: 0.9rem;
       font-weight: 600;
@@ -273,7 +358,7 @@
       font-size: 0.75rem;
       padding: 2px 7px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.55);
+      border: 1px solid rgba(148,163,184,0.7);
       color: var(--muted);
     }
 
@@ -283,25 +368,36 @@
       color: var(--muted);
       text-align: center;
     }
+
+    /* PHOTO: make responsive on small screens */
+    @media (max-width: 640px) {
+      header {
+        padding: 16px 14px 18px;
+      }
+      header img {
+        margin-top: 8px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- NEW HEADER WITH PHOTO ON RIGHT -->
-    <header style="display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap;">
+    <!-- HEADER WITH RIGHT-SIDE PHOTO -->
+    <header>
 
       <!-- LEFT: TEXT -->
-      <div class="brand" style="max-width:650px;">
+      <div class="brand">
         <h1>Suman Teja</h1>
         <h2>Data Analyst · Healthcare & Financial Analytics</h2>
         <p class="tagline">
-          Turning healthcare & financial data into clear, actionable insights that reduce cost, manage risk,
-          and support smarter decisions.
+          Turning healthcare & financial data into clear, actionable insights that reduce cost,
+          manage risk, and support smarter decisions.
         </p>
         <div class="pill-row">
           <span class="pill">4+ years experience</span>
           <span class="pill">Medical Economics & MER</span>
           <span class="pill">Loss Mitigation & Mortgage Analytics</span>
+          <span class="status-pill">Open to Data Analyst & BI roles</span>
         </div>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://www.linkedin.com/in/sumantejagoud/" target="_blank">
@@ -323,7 +419,7 @@
            " />
 
       <!-- NAV UNDERNEATH -->
-      <nav style="width:100%; margin-top:20px;">
+      <nav>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#experience">Experience</a>
