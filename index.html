@@ -32,25 +32,6 @@
       overflow-x: hidden;
     }
 
-    /* subtle animated glow behind everything */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 10% 0, rgba(56,189,248,0.16) 0, transparent 55%),
-        radial-gradient(circle at 90% 100%, rgba(168,85,247,0.16) 0, transparent 55%);
-      opacity: 0.7;
-      pointer-events: none;
-      z-index: -1;
-      /* animation removed for professional tone */
-    }
-
-    @keyframes floatGlow {
-      0% { transform: translate3d(0, 0, 0) scale(1); }
-      100% { transform: translate3d(-40px, 30px, 0) scale(1.05); }
-    }
-
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
