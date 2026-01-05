@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f172a;
+      --bg: #020617;
       --card: rgba(15,23,42,0.95);
       --accent: #38bdf8;
       --accent-soft: rgba(56,189,248,0.18);
@@ -194,19 +194,21 @@
     section { margin-bottom: 22px; }
 
     .section-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      margin-bottom: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      /* Emphasize primary recruiter sections */
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Emphasize primary recruiter sections */
 #experience .section-label,
 #projects .section-label {
   color: #e5e7eb;
-    }
+}
 
     .section-label::after {
       content: "";
@@ -270,10 +272,16 @@
 
     .exp-role { font-weight: 700; font-size: 1rem; }
     .exp-meta { font-size: 0.8rem; color: var(--muted); }
-    .exp-subtitle { font-size: 0.8rem; color: var(--muted); margin-bottom: 3px;
-                  /* Corporate header highlight for Experience & Projects */
+    .exp-subtitle {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+
+/* Corporate header highlight for Experience & Projects */
 .corp-header {
-  color: #7aa2f7;}
+  color: #8fb5ff;
+}
 
     .exp-highlights {
       margin-top: 6px;
