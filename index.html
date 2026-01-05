@@ -43,7 +43,7 @@
       opacity: 0.7;
       pointer-events: none;
       z-index: -1;
-      animation: floatGlow 16s ease-in-out infinite alternate;
+      /* animation removed for professional tone */
     }
 
     @keyframes floatGlow {
@@ -221,6 +221,10 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      /* Emphasize primary recruiter sections */
+#experience .section-label,
+#projects .section-label {
+  color: #e5e7eb;
     }
 
     .section-label::after {
@@ -264,7 +268,7 @@
 
     .about-text p {
       font-size: 0.9rem;
-      color: #e5e7eb;
+      color: #d1d5db;
       margin-bottom: 8px;
     }
 
@@ -452,7 +456,7 @@
 
         <!-- EXPERIENCE -->
         <section id="experience">
-          <div class="section-label">Experience</div>
+          <div class="section-label">Professional Experience</div>
           <div class="card">
             <div class="card-inner">
               <!-- MerDevelop -->
@@ -658,6 +662,18 @@
             </div>
           </div>
         </section>
+        <section id="certifications">
+  <div class="section-label">Certifications</div>
+  <div class="card">
+    <div class="card-inner">
+      <ul class="exp-highlights">
+        <li>Kaggle Learn – Intro to Machine Learning</li>
+        <li>Kaggle Learn – Python</li>
+        <li>Kaggle Learn – Pandas</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         <!-- CONTACT -->
         <section id="contact">
