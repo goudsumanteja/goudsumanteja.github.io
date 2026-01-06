@@ -13,12 +13,12 @@
 - Deep Learning Basics
 
 ### Credential
-Microsoft Learn Achievement Badge
 
+🏅 Microsoft Learn Achievement Badge  
 ![Microsoft ML Fundamentals Badge](Microsoft_Machine_Learning_Fundamentals_Badge.png)
 
-🔗 **Microsoft Learn Profile:**  
-https://learn.microsoft.com/profile/sumantejagoud-7676
+🔗 **Verify on Microsoft Learn (Achievements):**  
+https://learn.microsoft.com/en-us/users/sumantejagoud-7676/achievements?tab=tab-modules
 ---
 
 ## Kaggle Learn – Intro to Machine Learning
