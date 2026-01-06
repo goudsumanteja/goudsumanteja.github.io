@@ -19,3 +19,24 @@ Microsoft Learn Achievement Badge
 
 🔗 **Microsoft Learn Profile:**  
 https://learn.microsoft.com/profile/sumantejagoud-7676
+---
+
+## Kaggle Learn – Intro to Machine Learning
+
+**Issuer:** Kaggle  
+**Status:** Completed (Certificate Earned)
+
+### Skills Covered
+- Supervised Machine Learning
+- Model Training with Decision Trees
+- Random Forests
+- Model Validation & Evaluation
+- Feature Engineering Basics
+
+### Credential
+
+🔗 **Verify on Kaggle Learn:**  
+https://www.kaggle.com/learn/certification/sumantejagoud/intro-to-machine-learning
+
+📁 **Related GitHub Project:**  
+https://github.com/goudsumanteja/kaggle-intro-to-machine-learning
