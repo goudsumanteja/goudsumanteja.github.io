@@ -4,21 +4,19 @@
 ## Microsoft – Machine Learning Fundamentals
 
 **Issuer:** Microsoft Learn  
-**Status:** Completed (Assessment Passed)
+**Status:** Completed (Assessment Explained)
 
 ### Skills Covered
-- Machine Learning Fundamentals
-- Regression, Classification, Clustering
-- Model Training & Evaluation
-- Deep Learning Basics
+- Machine Learning Fundamentals  
+- Regression, Classification, Clustering  
+- Model Training & Evaluation  
+- Deep Learning Basics  
 
 ### Credential
-
-🏅 Microsoft Learn Achievement Badge  
 ![Microsoft ML Fundamentals Badge](Microsoft_Machine_Learning_Fundamentals_Badge.png)
 
-🔗 **Verify on Microsoft Learn (Achievements):**  
-https://learn.microsoft.com/en-us/users/sumantejagoud-7676/achievements?tab=tab-modules
+🔗 **Verify on Microsoft Learn:**  
+https://learn.microsoft.com/en-us/users/sumantejagoud-7676/achievements
 ---
 
 ## Kaggle Learn – Intro to Machine Learning
