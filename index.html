@@ -7,15 +7,15 @@
   <meta name="description" content="Data Analyst with 4+ years of experience in healthcare, insurance, and financial analytics.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --accent: #2563eb;
-  --accent-soft: #e0e7ff;
-  --text: #0f172a;
-  --muted: #475569;
-  --border: #e5e7eb;
-  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+   :root {
+  --bg: #020617;              /* GitHub dark background */
+  --card: #0f172a;            /* Dark card */
+  --accent: #38bdf8;          /* Soft blue */
+  --accent-soft: rgba(56,189,248,0.12);
+  --text: #e5e7eb;            /* Main text */
+  --muted: #9ca3af;           /* Secondary text */
+  --border: #1e293b;          /* Subtle border */
+  --shadow: 0 18px 40px rgba(0,0,0,0.45);
   --radius-lg: 18px;
 }
 
@@ -189,9 +189,8 @@
     }
 
     .card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
+       background: var(--card);
+  border: 1px solid var(--border);
       padding: 16px 18px;
       box-shadow: var(--shadow);
       position: relative;
@@ -203,7 +202,7 @@
 
     .about-text p {
   font-size: 0.9rem;
-  color: #0f172a;
+  color: var(--text);
 }
 
     .exp-item {
@@ -237,7 +236,7 @@
     .exp-highlights {
   margin-top: 6px;
   font-size: 0.9rem;
-  color: #0f172a;
+  color: var(--text);
 }
     .exp-highlights li { margin-left: 18px; margin-bottom: 3px; }
 
@@ -250,37 +249,34 @@
   border-radius: 999px;
   border: 1px solid #cbd5f5;
   padding: 3px 9px;
-  color: #0f172a;
-  background: #f8fafc;
+  background: #020617;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
-  .edu-item { font-size: 0.9rem; color: #0f172a; }
+  .edu-item { font-size: 0.9rem;color: var(--text); }
     .edu-degree { font-weight: 600; }
     .edu-school { color: var(--muted); font-size: 0.84rem; margin-bottom: 2px; }
     .edu-meta { font-size: 0.8rem; color: var(--muted); }
 
-    .contact-list { list-style: none; font-size: 0.9rem; color: #0f172a; }
+    .contact-list { list-style: none; font-size: 0.9rem; color: var(--text); }
     .contact-list li { margin-bottom: 6px; }
 
     .project-card {
       .project-card {
-  border-radius: 18px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-      padding: 10px 12px;
-      margin-bottom: 10px;
-      transition: transform 0.14s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
-    }
-   .project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
-  border-color: #c7d2fe;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
 }
-
+.project-card:hover {
+  border-color: var(--accent);
+}
     .project-title {
       font-size: 0.92rem;
       font-weight: 700;
-      color: #0f172a;
+      color: var(--text);
       display: flex;
       justify-content: space-between;
       gap: 8px;
@@ -293,7 +289,7 @@
     .project-desc {
       font-size: 0.83rem;
       .project-desc {
-  color: #334155;
+ color: var(--text);
 }
       margin-bottom: 3px;
     }
