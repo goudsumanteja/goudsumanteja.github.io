@@ -8,17 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-     --bg: #f8fafc;
-      --card: #ffffff;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56,189,248,0.18);
-      --accent-alt: #a855f7;
-     --text: #0b1324;
---muted: #334155;
-     --border: rgba(203,213,225,0.8);
---shadow: 0 10px 30px rgba(15,23,42,0.12);
-      --radius-lg: 22px;
-    }
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --accent-soft: #e0e7ff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e5e7eb;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --radius-lg: 18px;
+}
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -52,7 +51,7 @@
       border-radius: 24px;
       border: 1px solid rgba(148,163,184,0.35);
       background: linear-gradient(135deg, #ffffff, #f1f5f9);
-      box-shadow: 0 24px 60px rgba(15,23,42,0.9);
+     box-shadow: 0 10px 30px rgba(15,23,42,0.12);
       position: relative;
       overflow: hidden;
     }
@@ -94,14 +93,13 @@
     }
 
     .pill {
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      padding: 4px 11px;
-      font-size: 0.78rem;
-      color: #e5e7eb;
-      background: rgba(15,23,42,0.9);
-      backdrop-filter: blur(14px);
-    }
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  color: #0f172a;
+  background: #f1f5f9;
+}
 
     .cta-row {
       display: flex;
@@ -191,12 +189,8 @@
 }
 
 /* Emphasize primary recruiter sections */
-#experience .section-label,
-#projects .section-label {
-  color: #e5e7eb;
-}
 
-    .section-label::after {
+ .section-label::after {
       content: "";
       height: 1px;
       width: 54px;
@@ -217,12 +211,6 @@
     }
 
     .card-inner { position: relative; z-index: 1; }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 26px 70px rgba(15,23,42,0.95);
-      border-color: rgba(148,163,184,0.75);
-    }
 
     .about-text p {
   font-size: 0.9rem;
@@ -254,14 +242,14 @@
 
 /* Corporate header highlight for Experience & Projects */
 .corp-header {
-  color: #8fb5ff;
+  color: #0f172a;
 }
 
     .exp-highlights {
-      margin-top: 6px;
-      font-size: 0.84rem;
-      color: #e5e7eb;
-    }
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
     .exp-highlights li { margin-left: 18px; margin-bottom: 3px; }
 
     .skills-group { margin-bottom: 10px; }
@@ -277,33 +265,33 @@
   background: #f8fafc;
 }
 
-    .edu-item { font-size: 0.86rem; color: #e5e7eb; }
+  .edu-item { font-size: 0.9rem; color: #0f172a; }
     .edu-degree { font-weight: 600; }
     .edu-school { color: var(--muted); font-size: 0.84rem; margin-bottom: 2px; }
     .edu-meta { font-size: 0.8rem; color: var(--muted); }
 
-    .contact-list { list-style: none; font-size: 0.85rem; color: #e5e7eb; }
+    .contact-list { list-style: none; font-size: 0.9rem; color: #0f172a; }
     .contact-list li { margin-bottom: 6px; }
 
     .project-card {
-      border-radius: 18px;
-      border: 1px solid rgba(148,163,184,0.55);
-      background: rgba(15,23,42,0.94);
+      .project-card {
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
       padding: 10px 12px;
       margin-bottom: 10px;
       transition: transform 0.14s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
     }
-    .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.95);
-      border-color: rgba(56,189,248,0.9);
-      background: rgba(15,23,42,0.98);
-    }
+   .project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+  border-color: #c7d2fe;
+}
 
     .project-title {
       font-size: 0.92rem;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       display: flex;
       justify-content: space-between;
       gap: 8px;
@@ -315,7 +303,9 @@
     }
     .project-desc {
       font-size: 0.83rem;
-      color: #cbd5e1;
+      .project-desc {
+  color: #334155;
+}
       margin-bottom: 3px;
     }
     .project-tags {
@@ -664,7 +654,7 @@
         <div class="edu-degree">Master of Science in Business Analytics</div>
         <div class="edu-school">University of Hartford</div>
         <div class="edu-meta">Graduated 2025</div>
-        <p style="margin-top:4px;font-size:0.82rem;color:#e5e7eb;">
+        <p style="margin-top:4px;font-size: 0.9rem; color: #0f172a;">
           Focus on machine learning, predictive analytics, and big data (Hadoop, Spark, Databricks)
           applied to finance and healthcare use cases.
         </p>
@@ -675,7 +665,7 @@
         <div class="edu-degree">Bachelor of Business Administration (BBA)</div>
         <div class="edu-school">Osmania University</div>
         <div class="edu-meta">2015 – 2018</div>
-        <p style="margin-top:4px;font-size:0.82rem;color:#e5e7eb;">
+        <p style="margin-top:4px;font-size: 0.9rem; color: #0f172a;">
           Focused on principles of business economics, financial accounting, management,
           business statistics, and commerce. Built a strong foundation in quantitative analysis,
           financial reporting, and business decision-making.
