@@ -170,7 +170,7 @@
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--muted);
+   color: #cbd5e1;
   margin-bottom: 8px;
   display: inline-flex;
   align-items: center;
@@ -230,7 +230,8 @@
 
 /* Corporate header highlight for Experience & Projects */
 .corp-header {
-  color: #0f172a;
+  color: #e5e7eb;        /* visible light text */
+  font-weight: 600;
 }
 
     .exp-highlights {
@@ -639,10 +640,16 @@
         <div class="edu-degree">Master of Science in Business Analytics</div>
         <div class="edu-school">University of Hartford</div>
         <div class="edu-meta">Graduated 2025</div>
-        <p style="margin-top:4px;font-size: 0.9rem; color: #0f172a;">
-          Focus on machine learning, predictive analytics, and big data (Hadoop, Spark, Databricks)
-          applied to finance and healthcare use cases.
-        </p>
+        <p class="edu-desc">
+  Focus on machine learning, predictive analytics, and big data (Hadoop, Spark, Databricks)
+  applied to finance and healthcare use cases.
+</p>
+.edu-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.6;
+}
       </div>
 
       <!-- Bachelor's Degree -->
@@ -650,11 +657,17 @@
         <div class="edu-degree">Bachelor of Business Administration (BBA)</div>
         <div class="edu-school">Osmania University</div>
         <div class="edu-meta">2015 – 2018</div>
-        <p style="margin-top:4px;font-size: 0.9rem; color: #0f172a;">
-          Focused on principles of business economics, financial accounting, management,
-          business statistics, and commerce. Built a strong foundation in quantitative analysis,
-          financial reporting, and business decision-making.
-        </p>
+        <p class="edu-desc">
+  Focused on principles of business economics, financial accounting, management,
+  business statistics, and commerce. Built a strong foundation in quantitative analysis,
+  financial reporting, and business decision-making.
+</p>
+.edu-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.6;
+}
       </div>
 
     </div>
